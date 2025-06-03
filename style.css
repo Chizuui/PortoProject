@@ -4,6 +4,7 @@
     src: url(Assets/Gotham.otf);
 }
 
+
 * {
     padding: 0;
     margin: 0;
@@ -28,7 +29,6 @@
     font-family: "Plus Jakarta Sans";
     font-weight: 700;
     color: #000000;
-    letter-spacing: -px;
     position: relative;
     z-index: 2;
 }
@@ -44,12 +44,40 @@
 }
 
 .imageHome {
-    width: 7%; /* Set the width */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds shadow */
-    position: relative;
-    bottom: 66lvh;
-    left: 45lvh;
+    width: 30vh;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 15vw;
+    left: 65vw;
 }
+
+/* Untuk layar dengan lebar maksimal 1024px (tablet) */
+@media (max-width: 1024px) {
+    .imageHome {
+        width: 30vh; /* Ukuran lebih kecil untuk tablet */
+        bottom: 30vw;
+        left: 65vw;
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 768px (ponsel) */
+@media (max-width: 768px) {
+    .imageHome {
+        width: 20vh; /* Lebih kecil untuk ponsel */
+        bottom: 20vw;
+        left: 50vw;
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    .imageHome {
+        width: 15vh; /* Ukuran lebih kecil lagi */
+        bottom: 15vw;
+        left: 40vw;
+    }
+}
+
 
 
 .ul {
@@ -72,31 +100,31 @@ li::marker {
 }
 
 .navbar {
+    font-family: "Plus Jakarta Sans";
     position: fixed;
     bottom: 5vh;
-    left: 5vh;
+    left: 6vh;
     width: 100%;
     padding: 15px;
-    display: flex;
-    gap: 100px;
     z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
 }
 
 .navbar button {
     background-color: white;
     border-style: solid;
-    border-color: blue;
+    border-color: #8b8ef2;
     padding: 15px 25px;
     font-size: 16px;
-    color: blue;
-    border-radius: 20px; /* Membuat tombol berbentuk rounded */
+    color: #8b8ef2;
+    border-radius: 24px; /* Membuat tombol berbentuk rounded */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 8px;
 }
 
 .navbar button:hover {
-    background-color: blue;
+    background-color: #8b8ef2;
     border-style: solid;
-    border-color: blue;
+    border-color: #8b8ef2;
     color: white;
 }
