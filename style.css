@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@font-face {
+    font-family: "Gotham";
+    src: url(Assets/Gotham.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.homepage{
+    font-family: "Plus Jakarta Sans";
+    width: 100vw;
+    height: 100svh;
+    padding: 0 69px;
+    background: linear-gradient(180deg, #8b8ef2 0%, #ffffff 100%);
+    overflow-x: hidden;
+}
+
+.header1 {
+    width: 100%;
+    height: auto;
+    font-size: 10vw;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -10px;
+    position: relative;
+    z-index: 2;
+}
+
+.header2 {
+    font-style:italic
+}
+
+.navbar {
+    font-family: "Plus Jakarta Sans";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: left;  
+    gap: 10px;
+}
+
+.navbar button {
+    background-color: #4d53b0;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    color: white;
+    border-radius: 20px; /* Makes the buttons rounded */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #292c5b;
+}
