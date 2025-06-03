@@ -22,11 +22,12 @@
 .header1 {
     width: 100%;
     height: auto;
+    top:30lvh;
     font-size: 10vw;
     font-family: "Plus Jakarta Sans";
     font-weight: 700;
     color: #000000;
-    letter-spacing: -10px;
+    letter-spacing: -px;
     position: relative;
     z-index: 2;
 }
