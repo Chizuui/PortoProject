@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 .homepage{
@@ -39,40 +40,63 @@
     line-height: 1.6; /* Improves readability */
     text-align: justify; /* Makes the paragraph justified */
     position: relative;
+    width: 50vw;
 }
 
 .imageHome {
     width: 7%; /* Set the width */
-    border-radius: 10px; /* Rounded corners */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds shadow */
     position: relative;
     bottom: 66lvh;
     left: 45lvh;
 }
 
+
+.ul {
+    list-style: none;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+li::marker {
+    content: ""; /* Menghapus marker */
+}
+
+.li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
 .navbar {
-    font-family: "Plus Jakarta Sans";
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 5vh;
+    left: 5vh;
     width: 100%;
-    padding: 40px;
+    padding: 15px;
     display: flex;
-    justify-content: left;  
-    gap: 10px;
+    gap: 100px;
+    z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
 }
 
 .navbar button {
-    background-color: #4d53b0;
-    border: none;
+    background-color: white;
+    border-style: solid;
+    border-color: blue;
     padding: 15px 25px;
     font-size: 16px;
-    color: white;
-    border-radius: 20px; /* Makes the buttons rounded */
+    color: blue;
+    border-radius: 20px; /* Membuat tombol berbentuk rounded */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .navbar button:hover {
-    background-color: #292c5b;
+    background-color: blue;
+    border-style: solid;
+    border-color: blue;
+    color: white;
 }
