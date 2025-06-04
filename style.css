@@ -17,6 +17,7 @@
 }
 
 .header1 {
+    display: inline-block;
     width: 100%;
     height: auto;
     top:25lvh;
@@ -26,6 +27,8 @@
     color: #000000;
     position: relative;
     z-index: 2;
+    white-space: nowrap;
+
 }
 
 .paragraph {
@@ -46,40 +49,6 @@
     left: 62vw;
 }
 
-/* Untuk layar dengan lebar maksimal 1024px (tablet) */
-@media (max-width: 1024px) {
-    .header1 {
-        font-size: 12vw; /* Ukuran font lebih kecil untuk tablet */
-        height: auto;
-    }
-
-    .imageHome {
-        width: 25vh; /* Ukuran lebih kecil untuk tablet */
-        bottom: 62vw;
-        left: 68vw;
-    }
-}
-
-/* Untuk layar dengan lebar maksimal 768px (ponsel) */
-@media (max-width: 768px) {
-    .imageHome {
-        width: 20vh; /* Lebih kecil untuk ponsel */
-        bottom: 20vw;
-        left: 50vw;
-    }
-}
-
-/* Untuk layar dengan lebar maksimal 480px (ponsel kecil) */
-@media (max-width: 480px) {
-    .imageHome {
-        width: 15vh; /* Ukuran lebih kecil lagi */
-        bottom: 15vw;
-        left: 40vw;
-    }
-}
-
-
-
 .navbar ul {
     display: flex;
     justify-content: flex-start; /* Memastikan tombol lain tetap di kiri */
@@ -95,7 +64,7 @@
 }
 
 .navbar a:last-child {
-    margin-left: 48vh; /* Memindahkan tombol "Contact" ke kanan */
+    margin-left: 140vh; /* Memindahkan tombol "Contact" ke kanan */
 }
 
 .navbar {
@@ -128,11 +97,123 @@
     color: white;
 }
 
+
 .works {
     background-color: #ffffff;
     padding: 0 69px;
     margin: 60px 0;
 }
-.works-constructor {
-    padding: 40px 0;
+.work-item {
+    align-items: center; /* Memastikan elemen sejajar secara vertikal */
+    gap: 20px; /* Memberikan jarak antara teks dan gambar */
+}
+
+.work-item img {
+    width: 350px; /* Ukuran gambar */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    top: -10vh;
+    position: relative;
+    align-items: justify;
+    margin: 10px;
+}
+
+.work-item h2 {
+    top: -60lvh;
+    left: 72vh;
+    display: inline-block;
+    width: 10%;
+    font-size: 2.5vw;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 2000;
+    color: #000000;
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+}
+.work-item2 h2 {
+    top: -6lvh;
+    left: 72vh;
+    display: inline-block;
+    width: 10%;
+    font-size: 2.5vw;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 2000;
+    color: #000000;
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+}
+.logo {
+    width: 15vh;
+    position: fixed;
+    top: 6vh;
+    left: 90vh;
+    z-index: 1000; /* Pastikan logo berada di atas elemen lain */
+}
+
+
+/* Untuk layar dengan lebar maksimal 1024px (tablet) */
+@media (max-width: 1024px) {
+    .header1 {
+        font-size: 12vw; /* Ukuran font lebih kecil untuk tablet */
+        height: auto;
+    }
+
+    .navbar a:last-child {
+        margin-left: 40vh; /* Memindahkan tombol "Contact" ke kanan */
+    }
+
+    .logo {
+        width: 12vh;
+        position: fixed;
+        top: 6.5vh;
+        left: 44vh;
+        z-index: 1000; /* Pastikan logo berada di atas elemen lain */
+}
+
+    .imageHome {
+        width: 25vh; /* Ukuran lebih kecil untuk tablet */
+        bottom: 64vw;
+        left: 68vw;
+    }
+}
+
+
+@media screen and (max-height: 768px) {
+    .header1 {
+        font-size: 14vw; /* Ukuran font lebih kecil untuk ponsel */
+        height: auto;
+    }
+
+    .imageHome {
+        width: 45vh;
+        right: 90vh;
+    }
+
+    .navbar a:last-child {
+        margin-left: 100vh; /* Memindahkan tombol "Contact" ke kanan */
+    }
+    
+}
+
+
+/* Untuk layar dengan lebar maksimal 768px (ponsel) */
+@media (max-width: 768px) {
+    .imageHome {
+        width: 15vh; /* Lebih kecil untuk ponsel */
+        bottom: 115vw;
+        left: 68vw;
+    }
+        .navbar a:last-child {
+        margin-left: 10vh; /* Memindahkan tombol "Contact" ke kanan */
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    .imageHome {
+        width: 15vh; /* Ukuran lebih kecil lagi */
+        bottom: 15vw;
+        left: 40vw;
+    }
 }
