@@ -1,0 +1,231 @@
+/* Reset Global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+
+/* Homepage Section */
+.homepage {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 5vw;
+  background: linear-gradient(180deg, #bcbef6 0%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header1 {
+    width: 100%;
+    height: auto;
+    font-size: clamp(100px, 26vw, 200px);
+    font-family: "Plus Jakarta Sans",sans-serif;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -14px;
+    position: relative;
+    z-index: 2;
+}
+
+.paragraph {
+  font-size: clamp(12px, 1.5vw, 18px);
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 55vw;  /* Lebar dikurangi */
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: auto;
+  background: rgba(255, 255, 255, 0);
+  padding: 10px 5%;  /* Menggunakan persen agar responsif */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 10px;  /* Gap dikurangi */
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar button {
+  padding: 8px 16px;  /* Diperkecil */
+  font-size: 14px;  /* Gunakan ukuran font yang lebih kecil */
+  background-color: transparent;
+  border: 2px solid #8b8ef2;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo {
+    width: 12vh;
+    top: 14px;
+    position: relative;
+    margin-right: 10px;
+    z-index: 1000; /* Pastikan logo berada di atas elemen lain */
+}
+
+.navbar button:hover {
+  background-color: #8b8ef2;
+  color: white;
+}
+
+/* Image Home */
+.imageHome {
+  display: block;
+  max-width: 30vw;  /* Lebar diperkecil */
+  height: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem auto;
+}
+
+/* Works Section */
+.works {
+    padding: 2vw;
+    margin-top: 5rem;
+    text-align: left;
+    font-family: "Plus Jakarta Sans";
+}
+
+.work-item, .work-item-2 {
+    margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Agar heading selalu berada di baris baru dan tampil penuh di atas gambar */
+.work-item h2 {
+    width: 100%;           /* Mengambil seluruh lebar container */
+    flex-basis: 100%;      /* Memastikan heading memulai baris baru */
+    font-size: clamp(18px, 2vw, 24px);
+    margin-bottom: 1rem;   /* Jarak bawah untuk .work-item h2 */
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.work-item-2 h2 {
+    width: 100%;           /* Mengambil seluruh lebar container */
+    flex-basis: 100%;      /* Memastikan heading memulai baris baru */
+    font-size: clamp(18px, 2vw, 24px);
+    margin-bottom: 4rem;   /* Ditingkatkan agar ada jarak lebih besar dengan gambar */
+    text-align: center;
+    margin-top: -1rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* Aturan gambar yang ada di dalam .work-item dan .work-item-2 */
+.work-item img,
+.work-item-2 img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Jika diperlukan, tambahkan margin-top khusus untuk gambar di .work-item-2 */
+.work-item-2 img {
+    max-width: 40%;
+    align-content: left;
+    align-content: left;
+    margin-top: -2rem; /* Menambahkan jarak ekstra dari heading */
+}
+
+/* Contact Section */
+.contact {
+  padding: 4vw;
+  text-align: center;
+      font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.contact-box {
+  background-color: #f4f4f4;
+  padding: 16px;
+  border-radius: 12px;
+  max-width: 50vw;  /* Lebar dikurangi */
+  margin: 16px auto 0;
+  text-align: center;
+  font-size: clamp(12px, 1vw, 16px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1280px) {
+  .paragraph {
+    max-width: 75vw;
+  }
+  .imageHome {
+    max-width: 50vw;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 5%;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .imageHome {
+    max-width: 70vw;
+  }
+  .work-item img,
+  .work-item-2 img {
+    max-width: 60vw;
+  }
+    .header1 {
+        font-size: 40vw;
+        line-height: 35vw;
+        letter-spacing: -14px;
+    }
+  .contact-box {
+    max-width: 70vw;
+    font-size: clamp(12px, 1.5vw, 16px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header1 {
+    font-size: clamp(18px, 8vw, 50px);
+  }
+  .navbar button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+  .contact-box {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+        .header1 {
+        font-size: 24vw;
+        letter-spacing: -5px;
+    }
+}
