@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@font-face {
-    font-family: "Gotham";
-    src: url(Assets/Gotham.otf);
-}
-
 
 * {
     padding: 0;
@@ -16,15 +11,15 @@
     font-family: "Plus Jakarta Sans";
     width: 100vw;
     height: 100svh;
-    padding: 0 69px;
-    background: linear-gradient(180deg, #8b8ef2 0%, #ffffff 100%);
+    padding: 0 100px;
+    background: linear-gradient(180deg, #bcbef6 0%, #ffffff 100%);
     overflow-x: hidden;
 }
 
 .header1 {
     width: 100%;
     height: auto;
-    top:30lvh;
+    top:25lvh;
     font-size: 10vw;
     font-family: "Plus Jakarta Sans";
     font-weight: 700;
@@ -35,7 +30,7 @@
 
 .paragraph {
     font-size: 18px;
-    top: 30lvh;
+    top: 25lvh;
     color: #333; /* Dark gray text */
     line-height: 1.6; /* Improves readability */
     text-align: justify; /* Makes the paragraph justified */
@@ -44,19 +39,24 @@
 }
 
 .imageHome {
-    width: 30vh;
+    width: 44vh;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    bottom: 15vw;
-    left: 65vw;
+    position: relative;
+    bottom: 36vw;
+    left: 62vw;
 }
 
 /* Untuk layar dengan lebar maksimal 1024px (tablet) */
 @media (max-width: 1024px) {
+    .header1 {
+        font-size: 12vw; /* Ukuran font lebih kecil untuk tablet */
+        height: auto;
+    }
+
     .imageHome {
-        width: 30vh; /* Ukuran lebih kecil untuk tablet */
-        bottom: 30vw;
-        left: 65vw;
+        width: 25vh; /* Ukuran lebih kecil untuk tablet */
+        bottom: 62vw;
+        left: 68vw;
     }
 }
 
@@ -80,46 +80,45 @@
 
 
 
-.ul {
+.navbar ul {
+    display: flex;
+    justify-content: flex-start; /* Memastikan tombol lain tetap di kiri */
+    align-items: center;
     list-style: none;
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-}
-li::marker {
-    content: ""; /* Menghapus marker */
+    padding: 0;
 }
 
-.li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
+.navbar li {
+    display: flex;
+    gap: 10px; /* Jarak antar tombol */
+    width: 100%;
+}
+
+.navbar a:last-child {
+    margin-left: 48vh; /* Memindahkan tombol "Contact" ke kanan */
 }
 
 .navbar {
     font-family: "Plus Jakarta Sans";
     position: fixed;
-    bottom: 5vh;
-    left: 6vh;
+    bottom: 85vh;
+    left: 8vh;
     width: 100%;
     padding: 15px;
     z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
 }
 
 .navbar button {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border-style: solid;
     border-color: #8b8ef2;
     padding: 15px 25px;
     font-size: 16px;
-    color: #8b8ef2;
+    color: black;
     border-radius: 24px; /* Membuat tombol berbentuk rounded */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 8px;
+    margin: 5px;
 }
 
 .navbar button:hover {
@@ -127,4 +126,13 @@ li::marker {
     border-style: solid;
     border-color: #8b8ef2;
     color: white;
+}
+
+.works {
+    background-color: #ffffff;
+    padding: 0 69px;
+    margin: 60px 0;
+}
+.works-constructor {
+    padding: 40px 0;
 }
