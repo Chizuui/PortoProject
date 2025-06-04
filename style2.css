@@ -4,7 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
+  cursor: url('Assets/Cursor/2.svg'), auto;
 }
 
 /* Homepage Section */
@@ -13,8 +13,9 @@
   width: 100vw;
   min-height: 100vh;
   padding: 5vw;
-  background: linear-gradient(180deg, #bcbef6 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #ddd3f5 0%, #ffffff 100%);
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -72,8 +73,8 @@
 .navbar button {
   padding: 8px 16px;  /* Diperkecil */
   font-size: 14px;  /* Gunakan ukuran font yang lebih kecil */
-  background-color: transparent;
-  border: 2px solid #8b8ef2;
+  background-color: white;
+  border: 2px solid #3700B3;
   color: black;
   border-radius: 20px;
   cursor: pointer;
@@ -89,7 +90,14 @@
 }
 
 .navbar button:hover {
-  background-color: #8b8ef2;
+    background-color: #3700B3;
+    color: white;
+    cursor: url('Assets/Cursor/2.svg'), auto;
+}
+
+/* Style ketika link aktif */
+.navbar a.active button {
+  background-color: #3700B3;
   color: white;
 }
 
@@ -123,7 +131,7 @@
     width: 100%;           /* Mengambil seluruh lebar container */
     flex-basis: 100%;      /* Memastikan heading memulai baris baru */
     font-size: clamp(18px, 2vw, 24px);
-    margin-bottom: 1rem;   /* Jarak bawah untuk .work-item h2 */
+    margin-bottom: 2rem;   /* Jarak bawah untuk .work-item h2 */
     text-align: center;
     font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -145,6 +153,10 @@
   max-width: 20%;
   height: auto;
   border-radius: 10px;
+    border-color: black;
+    border-style: ridge;
+    box-shadow: #000000 0px 0px 2px;
+
 }
 
 /* Jika diperlukan, tambahkan margin-top khusus untuk gambar di .work-item-2 */
@@ -153,6 +165,9 @@
     align-content: left;
     align-content: left;
     margin-top: -2rem; /* Menambahkan jarak ekstra dari heading */
+    border-color: black;
+    border-style: ridge;
+    box-shadow: #000000 0px 0px 2px;
 }
 
 /* Contact Section */
@@ -163,6 +178,39 @@
 }
 
 .contact-box {
+    background-color: #7700ee;
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 75vw;  /* Lebar dikurangi */
+    margin: 16px auto 0;
+    text-align: left;
+    color: white;
+    font-size: clamp(24px, 1vw, 22px);
+    font-weight: 700;
+}
+
+.contact-box p {
+    font-weight: 200;
+    margin-top: 6px;
+}
+
+.contact-box h1 {
+    font-size: clamp(18px, 1.5vw, 20px);
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.copyright {
+    font-size: clamp(18px, 1.5vw, 20px);
+    margin-top: 100px;
+    text-align: right;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 50px;
+}
+
+
+.contact-box1 {
   background-color: #f4f4f4;
   padding: 16px;
   border-radius: 12px;
@@ -173,7 +221,24 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Adjustments */
+.socialMediaIcon {
+  display: flex;              /* Mengatur layout dengan Flexbox */
+  justify-content: flex-start;  /* Menempatkan ikon ke kanan */
+  gap: 20px;                  /* Jarak antar ikon */
+  margin-top: 10px;           /* Jarak antara heading dan ikon */
+}
+
+.social-icon {
+  width: 32px;               /* Ukuran kecil untuk ikon (sesuaikan jika perlu) */
+  height: auto;
+  transition: 0.2s ease-in-out; /* Opasional: animasi saat hover */
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    transition: 0.2s ease-in-out;     /* Sedikit memperbesar ikon saat hover */
+}/* Responsive Adjustments */
+
 @media screen and (max-width: 1280px) {
   .paragraph {
     max-width: 75vw;

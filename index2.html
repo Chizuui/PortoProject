@@ -11,8 +11,8 @@
 <body>
 
     <section class="homepage" id="home">
-        <h1 class="header1" data-aos="fade-up">chizz.ui</h1>
-        <p class="paragraph" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1 class="header1" data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">chizz.ui</h1>
+        <p class="paragraph" data-aos="fade-down" data-aos-delay="400" class="aos-init aos-animate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>
        <!--<img src="Assets/yuki.jpg" alt="Example Photo" class="imageHome" data-aos="fade-up"> --> 
     <div class="navbar">    
@@ -31,28 +31,83 @@
         <div class="work-item" data-aos="fade-up">
             <h2 class="header2">POSTER DESIGN</h2>
             <img src="Assets/Poster/poster1.jpg" alt="Work 1" data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
-            <img src="Assets/Poster/poster2.jpg" alt="Work 2" data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">
-            <img src="Assets/Poster/poster3.jpg" alt="Work 3" data-aos="fade-up" data-aos-delay="500" class="aos-init aos-animate">
-            <img src="Assets/Poster/poster4.jpg" alt="Work 4" data-aos="fade-up" data-aos-delay="600" class="aos-init aos-animate">
+            <img src="Assets/Poster/poster2.jpg" alt="Work 2" data-aos="fade-down" data-aos-delay="400" class="aos-init aos-animate">
+            <img src="Assets/Poster/poster3.jpg" alt="Work 3" data-aos="fade-up" data-aos-delay="600" class="aos-init aos-animate">
+            <img src="Assets/Poster/poster4.jpg" alt="Work 4" data-aos="fade-down" data-aos-delay="800" class="aos-init aos-animate">
         </div>
         <div class="work-item-2" data-aos="fade-up">
-            <h2 class="header2">OTHER DESIGN</h2>
+            <h2 class="header2">THUMBNAIL DESIGN</h2>
             <img src="Assets/Other/2.png" alt="Work 5" data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
-            <img src="Assets/Other/3.png" alt="Work 6" data-aos="fade-up" data-aos-delay="600" class="aos-init aos-animate">
+            <img src="Assets/Other/3.png" alt="Work 6" data-aos="fade-down" data-aos-delay="600" class="aos-init aos-animate">
     </section>     
 
-    <section class="contact" id="contact" data-aos="fade-up">
+    <section class="contact" id="contact" data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
         <div class="contact-info">
-        <h2>Contact</h2>
         </div>
         <div class="contact-box">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h3 data-aos="fade-right" data-aos-delay="400" class="aos-init aos-animate">Let's Be Connect Together</h3>
+            <p data-aos="fade-right" data-aos-delay="500" class="aos-init aos-animate">descarizki672@gmail.com</p>
+            <h1 data-aos="fade-right" data-aos-delay="600" class="aos-init aos-animate">Another Platform : </h1>
+                <div class="socialMediaIcon">
+                    <a onclick="window.open('https://web.facebook.com/AmagiriYuki01/', '_blank');"  data-aos="fade-down" data-aos-delay="400" class="aos-init aos-animate">
+                    <img src="Assets/Icon/fb.svg" alt="Facebook" class="social-icon">
+                    
+                </a>
+                    <a onclick="window.open('https://instagram.com/chizz.ui/', '_blank');"  data-aos="fade-down" data-aos-delay="500" class="aos-init aos-animate">
+                    <img src="Assets/Icon/ig.svg" alt="Instagram" class="social-icon">
+                    </a>
+                    <a onclick="window.open('https://vgen.co/ChizzUI/portfolio', '_blank');"  data-aos="fade-down" data-aos-delay="600" class="aos-init aos-animate">
+                    <img src="Assets/Icon/vgen.svg" alt="Vgen" class="social-icon">
+                    </a>
+                    <a onclick="window.open('https://github.com/Chizuui', '_blank');"  data-aos="fade-down" data-aos-delay="700" class="aos-init aos-animate">
+                    <img src="Assets/Icon/github.svg" alt="Github" class="social-icon">
+                    </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2025 chizz.ui. All right reserved</p>
+            <p>Version 1.0 Work In Progress</p>
         </div>
     </section>
 
     <script>
         AOS.init();
     </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Dapatkan semua section yang ingin dipantau (sesuaikan selector-nya jika perlu)
+    const sections = document.querySelectorAll('section');
+    // Dapatkan semua link navbar
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    // Konfigurasi Intersection Observer
+    const observerOptions = {
+      root: null,            // Menggunakan viewport sebagai root
+      threshold: 0.5         // Setengah area section harus terlihat agar dianggap aktif
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Hapus kelas 'active' dari semua link
+          navLinks.forEach(link => link.classList.remove('active'));
+
+          // Dapatkan ID section yang aktif (misalnya "works", "contact", atau "home")
+          const id = entry.target.getAttribute('id');
+          // Cari link yang mengarah ke section itu
+          const activeLink = document.querySelector('.navbar a[href="#' + id + '"]');
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observasi setiap section
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
 
 </body>
 </html>
