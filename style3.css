@@ -38,13 +38,34 @@ body {
 }
 
 .paragraph {
-  font-size: clamp(12px, 1.5vw, 18px);
+  font-size: clamp(20px, 1.5vw, 18px);
   color: #333;
   line-height: 1.6;
   text-align: justify;
   max-width: 55vw;  /* Lebar dikurangi */
   margin: 0 auto;
+  font-weight: 700;
 }
+
+.box-container {
+  display: flex;                 /* Susun anak-anak secara horizontal */
+  gap: 10px;                     /* Beri jarak antar box */
+  justify-content: center;       /* Opsional: untuk meratakan secara horizontal */
+  align-items: center;           /* Ratakan vertikal */
+}
+
+.box1 {
+  margin-top: 3vw;
+  padding: 12px 25px;
+  min-width: 50px;
+  border-radius: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  background-color: #7700ee;
+  color: white;
+  font-weight: 200;
+}
+
 
 /* Navbar */
 .navbar {
