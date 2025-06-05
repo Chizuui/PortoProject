@@ -6,20 +6,23 @@
   scroll-behavior: smooth;
   cursor: url('Assets/Cursor/2.svg'), auto;
 }
+body {
+    overflow-x: hidden;
+}
 
 /* Homepage Section */
 .homepage {
     font-family: "Plus Jakarta Sans", sans-serif;
-  width: 100vw;
-  min-height: 100vh;
-  padding: 5vw;
-  background: linear-gradient(180deg, #ddd3f5 0%, #ffffff 100%);
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5vw;
+    background: linear-gradient(180deg, #ddd3f5 0%, #ffffff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 .header1 {
@@ -55,6 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .navbar ul {
@@ -140,9 +144,9 @@
     width: 100%;           /* Mengambil seluruh lebar container */
     flex-basis: 100%;      /* Memastikan heading memulai baris baru */
     font-size: clamp(18px, 2vw, 24px);
-    margin-bottom: 4rem;   /* Ditingkatkan agar ada jarak lebih besar dengan gambar */
+    margin-bottom: -1rem;   /* Ditingkatkan agar ada jarak lebih besar dengan gambar */
     text-align: center;
-    margin-top: -1rem;
+    margin-top: -2rem;
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -163,8 +167,8 @@
 .work-item-2 img {
     max-width: 40%;
     align-content: left;
-    align-content: left;
-    margin-top: -2rem; /* Menambahkan jarak ekstra dari heading */
+    margin-bottom: -1rem;
+    margin-top: 1rem; /* Menambahkan jarak ekstra dari heading */
     border-color: black;
     border-style: ridge;
     box-shadow: #000000 0px 0px 2px;
@@ -180,15 +184,17 @@
 .contact-box {
     background-color: #7700ee;
     padding: 16px;
-    border-radius: 12px;
-    max-width: 75vw;  /* Lebar dikurangi */
-    margin: 16px auto 0;
+    border-radius: 26px;
+    max-width: 25vw;  /* Lebar dikurangi */
+    margin: 6vw 0 0 120px; /* top, right, bottom, left */
     text-align: left;
     color: white;
     font-size: clamp(24px, 1vw, 22px);
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 .contact-box p {
     font-weight: 200;
     margin-top: 6px;
@@ -197,35 +203,151 @@
 .contact-box h1 {
     font-size: clamp(18px, 1.5vw, 20px);
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
-.copyright {
-    font-size: clamp(18px, 1.5vw, 20px);
-    margin-top: 100px;
-    text-align: right;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 50px;
+.affiliaton {
+    background-color: #7700ee;
+    padding: 16px;
+    border-radius: 26px;
+    max-width: 25vw;  /* Lebar dikurangi */
+    margin: -20.2vw 0 0 34vw; /* top, right, bottom, left */
+    text-align: left;
+    color: white;
+    font-size: clamp(24px, 1vw, 22px);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.github-box {
+  display: flex;                 /* Arrange icon and text in a row */
+  align-items: center;           /* Vertically center the content */
+  padding: 6px 14px;             /* Vertical and horizontal padding */
+  min-width: 50px;              /* Minimum width to ensure horizontal stretch */
+  border-radius: 32px;            /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;         /* Remove underline on links */
+  background-color:white;
+}
 
-.contact-box1 {
-  background-color: #f4f4f4;
-  padding: 16px;
-  border-radius: 12px;
-  max-width: 50vw;  /* Lebar dikurangi */
-  margin: 16px auto 0;
-  text-align: center;
-  font-size: clamp(12px, 1vw, 16px);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+.github-box .social-icon {
+  width: 30px;                   /* Set icon size */
+  height: auto;
+}
+
+.github-box .github-text {
+    margin-left: 6px;              /* Space between icon and text */
+    font-size: clamp(14px, 1vw, 14px);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: black;
+    transition: 0.2s ease-in-out; /* Opasional: animasi saat hover */
+}
+
+.github-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;     /* Sedikit memperbesar ikon saat hover */
+}
+
+.vgen-box {
+  display: flex;                 /* Arrange icon and text in a row */
+  align-items: center;           /* Vertically center the content */
+  padding: 6px 14px;             /* Vertical and horizontal padding */
+  min-width: 50px;              /* Minimum width to ensure horizontal stretch */
+  border-radius: 32px;            /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;         /* Remove underline on links */
+  background-color:#b8ff26;
+  color: black;
+}
+
+.vgen-box .social-icon {
+  width: 30px;                   /* Set icon size */
+  height: auto;
+}
+
+.vgen-box .vgen-text {
+    margin-left: 6px;              /* Space between icon and text */
+    font-size: clamp(14px, 1vw, 14px);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: black;
+    transition: 0.2s ease-in-out; /* Opasional: animasi saat hover */
+}
+
+.vgen-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;     /* Sedikit memperbesar ikon saat hover */
+}
+
+.ig-box {
+  display: flex;                 /* Arrange icon and text in a row */
+  align-items: center;           /* Vertically center the content */
+  padding: 6px 14px;             /* Vertical and horizontal padding */
+  min-width: 50px;              /* Minimum width to ensure horizontal stretch */
+  border-radius: 32px;            /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;         /* Remove underline on links */
+  background-color:#de3d70;
+}
+
+.ig-box .social-icon {
+  width: 30px;                   /* Set icon size */
+  height: auto;
+}
+
+.ig-box .ig-text {
+    margin-left: 6px;              /* Space between icon and text */
+    font-size: clamp(14px, 1vw, 14px);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+    transition: 0.2s ease-in-out; /* Opasional: animasi saat hover */
+}
+
+.ig-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;     /* Sedikit memperbesar ikon saat hover */
+}
+
+.fb-box {
+  display: flex;                 /* Arrange icon and text in a row */
+  align-items: center;           /* Vertically center the content */
+  padding: 6px 14px;             /* Vertical and horizontal padding */
+  min-width: 50px;              /* Minimum width to ensure horizontal stretch */
+  border-radius: 32px;            /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;         /* Remove underline on links */
+  background-color:#3c5a9a;
+}
+
+.fb-box .social-icon {
+  width: 30px;                   /* Set icon size */
+  height: auto;
+}
+
+.fb-box .fb-text {
+    margin-left: 6px;              /* Space between icon and text */
+    font-size: clamp(14px, 1vw, 14px);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+    transition: 0.2s ease-in-out; /* Opasional: animasi saat hover */
+}
+
+.fb-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;     /* Sedikit memperbesar ikon saat hover */
 }
 
 .socialMediaIcon {
-  display: flex;              /* Mengatur layout dengan Flexbox */
-  justify-content: flex-start;  /* Menempatkan ikon ke kanan */
-  gap: 20px;                  /* Jarak antar ikon */
-  margin-top: 10px;           /* Jarak antara heading dan ikon */
+  display: flex;
+  flex-direction: column; /* Arrange child elements in a column */
+  gap: 10px;            /* Optional: add spacing between boxes */
+  margin-top: 10px;     /* Adjust as needed */
 }
 
 .social-icon {
@@ -239,12 +361,25 @@
     transition: 0.2s ease-in-out;     /* Sedikit memperbesar ikon saat hover */
 }/* Responsive Adjustments */
 
+
+.copyright {
+    font-size: clamp(8px, 1.5vw, 20px);
+    margin: 12vw 0 0 12vw; /* top, right, bottom, left */
+    text-align: right;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 50px;
+}
+
 @media screen and (max-width: 1280px) {
   .paragraph {
     max-width: 75vw;
   }
   .imageHome {
     max-width: 50vw;
+  }
+  .contact-box {
+    margin: 16px 0 0 70px; /* top, right, bottom, left */
+    max-width: 32vw;  /* Lebar dikurangi */
   }
 }
 
@@ -269,10 +404,26 @@
         line-height: 35vw;
         letter-spacing: -14px;
     }
+    .copyright {
+        margin: 20vw 0 0 12vw; /* top, right, bottom, left */
+    }
+    
   .contact-box {
     max-width: 70vw;
     font-size: clamp(12px, 1.5vw, 16px);
+    margin: 16vw 0 0 12vw; /* top, right, bottom, left */
   }
+  .contact-box p {
+    font-weight: 200;
+    margin-top: 6px;
+}
+
+    .contact-box h1 {
+        font-size: clamp(18px, 1.5vw, 20px);
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
 }
 
 @media screen and (max-width: 600px) {

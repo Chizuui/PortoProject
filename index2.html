@@ -7,6 +7,8 @@
     <title>Chizui Portfolio</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <script src="script.js" ></script>
 </head>
 <body>
 
@@ -37,32 +39,39 @@
         </div>
         <div class="work-item-2" data-aos="fade-up">
             <h2 class="header2">THUMBNAIL DESIGN</h2>
-            <img src="Assets/Other/2.png" alt="Work 5" data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
-            <img src="Assets/Other/3.png" alt="Work 6" data-aos="fade-down" data-aos-delay="600" class="aos-init aos-animate">
+            <img src="Assets/Other/2.png" alt="Work 5" data-aos="fade-right" data-aos-delay="200" class="aos-init aos-animate">
+            <img src="Assets/Other/3.png" alt="Work 6" data-aos="fade-left" data-aos-delay="600" class="aos-init aos-animate">
     </section>     
 
     <section class="contact" id="contact" data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
         <div class="contact-info">
         </div>
         <div class="contact-box">
-            <h3 data-aos="fade-right" data-aos-delay="400" class="aos-init aos-animate">Let's Be Connect Together</h3>
-            <p data-aos="fade-right" data-aos-delay="500" class="aos-init aos-animate">descarizki672@gmail.com</p>
-            <h1 data-aos="fade-right" data-aos-delay="600" class="aos-init aos-animate">Another Platform : </h1>
-                <div class="socialMediaIcon">
-                    <a onclick="window.open('https://web.facebook.com/AmagiriYuki01/', '_blank');"  data-aos="fade-down" data-aos-delay="400" class="aos-init aos-animate">
+            <h3>Let's Be Connect Together</h3>
+            <p>descarizki672@gmail.com</p>
+            <h1>Another Platform : </h1>
+            <div class="socialMediaIcon">
+                    <a onclick="window.open('https://web.facebook.com/AmagiriYuki01/', '_blank');" class="aos-init aos-animate fb-box">
                     <img src="Assets/Icon/fb.svg" alt="Facebook" class="social-icon">
-                    
-                </a>
-                    <a onclick="window.open('https://instagram.com/chizz.ui/', '_blank');"  data-aos="fade-down" data-aos-delay="500" class="aos-init aos-animate">
+                    <span class="fb-text">Akamiya Chizui</span>
+                    </a>
+                    <a onclick="window.open('https://instagram.com/chizz.ui/', '_blank');"  class="aos-init aos-animate ig-box">
                     <img src="Assets/Icon/ig.svg" alt="Instagram" class="social-icon">
+                    <span class="ig-text">@chizz.ui</span>
                     </a>
-                    <a onclick="window.open('https://vgen.co/ChizzUI/portfolio', '_blank');"  data-aos="fade-down" data-aos-delay="600" class="aos-init aos-animate">
+                    <a onclick="window.open('https://vgen.co/ChizzUI/portfolio', '_blank');"  class="aos-init aos-animate vgen-box">
                     <img src="Assets/Icon/vgen.svg" alt="Vgen" class="social-icon">
+                    <span class="vgen-text">@ChizzUI</span>
                     </a>
-                    <a onclick="window.open('https://github.com/Chizuui', '_blank');"  data-aos="fade-down" data-aos-delay="700" class="aos-init aos-animate">
+                    <a onclick="window.open('https://github.com/Chizuui', '_blank');"  class="aos-init aos-animate github-box">
                     <img src="Assets/Icon/github.svg" alt="Github" class="social-icon">
+                    <span class="github-text">Github</span>
                     </a>
             </div>
+        </div>
+        <div class="affiliaton">
+            <h2>Affiliation</h2>
+            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div class="copyright">
             <p>©2025 chizz.ui. All right reserved</p>
@@ -73,41 +82,5 @@
     <script>
         AOS.init();
     </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Dapatkan semua section yang ingin dipantau (sesuaikan selector-nya jika perlu)
-    const sections = document.querySelectorAll('section');
-    // Dapatkan semua link navbar
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    // Konfigurasi Intersection Observer
-    const observerOptions = {
-      root: null,            // Menggunakan viewport sebagai root
-      threshold: 0.5         // Setengah area section harus terlihat agar dianggap aktif
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Hapus kelas 'active' dari semua link
-          navLinks.forEach(link => link.classList.remove('active'));
-
-          // Dapatkan ID section yang aktif (misalnya "works", "contact", atau "home")
-          const id = entry.target.getAttribute('id');
-          // Cari link yang mengarah ke section itu
-          const activeLink = document.querySelector('.navbar a[href="#' + id + '"]');
-          if (activeLink) {
-            activeLink.classList.add('active');
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Observasi setiap section
-    sections.forEach(section => observer.observe(section));
-  });
-</script>
-
 </body>
 </html>
