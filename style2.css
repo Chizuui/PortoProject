@@ -181,47 +181,6 @@ body {
       font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.contact-box {
-    background-color: #7700ee;
-    padding: 16px;
-    border-radius: 26px;
-    max-width: 25vw;  /* Lebar dikurangi */
-    margin: 6vw 0 0 120px; /* top, right, bottom, left */
-    text-align: left;
-    color: white;
-    font-size: clamp(24px, 1vw, 22px);
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.contact-box p {
-    font-weight: 200;
-    margin-top: 6px;
-}
-
-.contact-box h1 {
-    font-size: clamp(18px, 1.5vw, 20px);
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.affiliaton {
-    background-color: #7700ee;
-    padding: 16px;
-    border-radius: 26px;
-    max-width: 25vw;  /* Lebar dikurangi */
-    margin: -20.2vw 0 0 34vw; /* top, right, bottom, left */
-    text-align: left;
-    color: white;
-    font-size: clamp(24px, 1vw, 22px);
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .github-box {
   display: flex;                 /* Arrange icon and text in a row */
   align-items: center;           /* Vertically center the content */
@@ -370,6 +329,59 @@ body {
     font-weight: 50px;
 }
 
+.contact-box, .affiliaton {
+
+	display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+        align-content: left;
+        align-items: left;
+        text-align: left;
+        color: white;
+        width: 24vw;              /* Lebar yang sama untuk kedua box */
+    	height: auto;
+        margin-top: 10vw;
+    	padding: 40px 35px;
+    	border-radius: 28px;
+}
+
+.affiliaton h2, .contact-box h2 {
+    	margin-bottom: 20px;
+}
+
+.affiliaton {
+    background-color: #7700ee;
+    width: 24vw;
+    margin-left: 30vw;
+    margin-top: -20.3vw;
+}
+
+.contact-box {
+    background-color: #7700ee;
+    width: 24vw;
+    margin-left: 5vw;
+}
+
+.unit  {
+    margin-top: 12px;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.role {
+  display: flex;
+  justify-content: space-between; /* Pushes the children to the opposite sides */
+  align-items: center;
+  margin-top: 30px;
+    font-weight: 100;
+}
+
+.year {
+    font-size: 14px;
+    margin-right: 20px;
+}
+
 @media screen and (max-width: 1280px) {
   .paragraph {
     max-width: 75vw;
@@ -378,7 +390,13 @@ body {
     max-width: 50vw;
   }
   .contact-box {
-    margin: 16px 0 0 70px; /* top, right, bottom, left */
+    margin-top: 30vw;
+    margin-right: 20vw;
+    max-width: 32vw;  /* Lebar dikurangi */
+  }
+    .affiliaton {
+    margin-bottom: 100vw;
+    margin-left: 34vw;
     max-width: 32vw;  /* Lebar dikurangi */
   }
 }
