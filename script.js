@@ -1,31 +1,36 @@
-  document.addEventListener('DOMContentLoaded', function() {
-    // Dapatkan semua section yang ingin dipantau (sesuaikan selector-nya jika perlu)
-    const sections = document.querySelectorAll('section');
-    // Dapatkan semua link navbar
-    const navLinks = document.querySelectorAll('.navbar a');
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navbar a');
+  
+  // Adjust these options to your layout.
+  const observerOptions = {
+    root: null,           // use the viewport
+    threshold: 0.3,       // section is active when at least 30% is visible
+    // Shift the viewport downward to compensate for your fixed header height, if needed.
+    rootMargin: "-100px 0px 0px 0px"
+  };
 
-    // Konfigurasi Intersection Observer
-    const observerOptions = {
-      root: null,            // Menggunakan viewport sebagai root
-      threshold: 0.5         // Setengah area section harus terlihat agar dianggap aktif
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Hapus kelas 'active' dari semua link
-          navLinks.forEach(link => link.classList.remove('active'));
-
-          // Dapatkan ID section yang aktif (misalnya "works", "contact", atau "home")
-          const id = entry.target.getAttribute('id');
-          // Cari link yang mengarah ke section itu
-          const activeLink = document.querySelector('.navbar a[href="#' + id + '"]');
-          if (activeLink) {
-            activeLink.classList.add('active');
-          }
+  // Create the observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Remove active class from all nav links
+        navLinks.forEach(link => link.classList.remove('active'));
+        
+        // Get ID of the section in view
+        const id = entry.target.getAttribute('id');
+        
+        // Add active class to the corresponding nav link
+        const activeLink = document.querySelector(`.navbar a[href="#${id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
         }
-      });
-    }, observerOptions);
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+
 
     // Observasi setiap section
     sections.forEach(section => observer.observe(section));
